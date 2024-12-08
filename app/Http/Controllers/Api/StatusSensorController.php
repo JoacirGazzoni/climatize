@@ -45,7 +45,7 @@ class StatusSensorController extends Controller
                 Sensor::where('mac_sensor', $mac)->delete();
             }
 
-            if ($status === 'C') {
+            if ($status == 'C') {
                 Sensor::create([
                     'id_equipamento' => $idEquipamento,
                     'mac_sensor' => $mac,
